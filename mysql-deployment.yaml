@@ -1,0 +1,27 @@
+# MySQL Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: S@i@@12345
+            - name: MYSQL_DATABASE
+              value: mydb
+            - name: MYSQL_HOST
+              value: localhost
+          ports:
+            - containerPort: 3306

@@ -1,0 +1,27 @@
+# max Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: max
+  template:
+    metadata:
+      labels:
+        app: max
+    spec:
+      containers:
+        - name: max
+          image: nithinsai4444/hospital:v1 
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MYSQL_HOST
+              value: mysql-service 
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              value: S@i@@12345
