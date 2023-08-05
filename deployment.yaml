@@ -1,4 +1,4 @@
-# max Deployment
+# hos Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -7,14 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: max
+      app: hos
   template:
     metadata:
       labels:
-        app: max
+        app: hos
     spec:
       containers:
-        - name: max
+        - name: hos
           image: nithinsai4444/hospital:v1 
           ports:
             - containerPort: 5000
