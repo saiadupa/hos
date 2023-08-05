@@ -4,7 +4,7 @@ metadata:
   name: service
 spec:
   selector:
-    app: max
+    app: hos
   ports:
     - protocol: TCP
       port: 80
