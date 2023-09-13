@@ -1,2 +1,1 @@
-# hos
-teszt
+Mini project review
