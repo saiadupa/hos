@@ -1,1 +1,1 @@
-Mini project review
+Hospital Management System
